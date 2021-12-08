@@ -5,21 +5,21 @@
 class Revgen < Formula
   desc "Only run go:generate when code changes"
   homepage "https://github.com/inigolabs/revgen"
-  version "0.0.9"
+  version "0.0.10"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/inigolabs/revgen/releases/download/v0.0.9/revgen_macos_arm64.tar.gz"
-      sha256 "cb346ac8dda9006b64fabacc9be1c65bf1bbe010a7e4e67ad7589ca507c6b23e"
+    if Hardware::CPU.intel?
+      url "https://github.com/inigolabs/revgen/releases/download/v0.0.10/revgen_macos_x86_64.tar.gz"
+      sha256 "6aabf6f98ed90b3cf38c8f94e1bf46f7bd4203e6714a946221f1586b122f8496"
 
       def install
         bin.install "revgen"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/inigolabs/revgen/releases/download/v0.0.9/revgen_macos_x86_64.tar.gz"
-      sha256 "797a0c2220d5ee1f3929bf45863454f453a8d9b40760e811ca494b522a5861e9"
+    if Hardware::CPU.arm?
+      url "https://github.com/inigolabs/revgen/releases/download/v0.0.10/revgen_macos_arm64.tar.gz"
+      sha256 "0e49770758c3467edc412a3ad4fc87dd7220c4b2a82c4ab861b117a1e05f2e0f"
 
       def install
         bin.install "revgen"
@@ -29,16 +29,16 @@ class Revgen < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/inigolabs/revgen/releases/download/v0.0.9/revgen_linux_arm64.tar.gz"
-      sha256 "bb4843fcad5c5ccaacbb0d1584d8423df28badac59ce8533e4f00ee9747773d7"
+      url "https://github.com/inigolabs/revgen/releases/download/v0.0.10/revgen_linux_arm64.tar.gz"
+      sha256 "3b0e6fea8b5a38128200b6b0ee6c3f1fa9520f6a969d976477b641cfd69f7ecc"
 
       def install
         bin.install "revgen"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/inigolabs/revgen/releases/download/v0.0.9/revgen_linux_x86_64.tar.gz"
-      sha256 "26b5106768cd65d2102618015d82dfb1096d0a6fbd4d5f5ae69d0a097aa9511b"
+      url "https://github.com/inigolabs/revgen/releases/download/v0.0.10/revgen_linux_x86_64.tar.gz"
+      sha256 "f909133c89a961237c926e6647cf423abc61df0588601048d4d8e6efefb8fca5"
 
       def install
         bin.install "revgen"
