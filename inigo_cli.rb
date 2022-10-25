@@ -5,20 +5,20 @@
 class InigoCli < Formula
   desc "Inigo CLI"
   homepage "https://www.inigolabs.com"
-  version "0.14.0"
+  version "0.15.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/inigolabs/cli/releases/download/v0.14.0/cli_macos_arm64.tar.gz"
-      sha256 "b1fd0b8e8d0e13859d87236f35d18ff4d310486f89581eb1defd4e2c4e480f4c"
+      url "https://github.com/inigolabs/cli/releases/download/v0.15.0/cli_macos_arm64.tar.gz"
+      sha256 "d79304b7320f4cb31440f22c722fc8872c882bc773d4e92d5070150d7cb61269"
 
       def install
         bin.install "inigo"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/inigolabs/cli/releases/download/v0.14.0/cli_macos_x86_64.tar.gz"
-      sha256 "c29cf311c83a5a7e09053e0fc254859f2034986d57c0bd59a0f1b8cc46694c1d"
+      url "https://github.com/inigolabs/cli/releases/download/v0.15.0/cli_macos_x86_64.tar.gz"
+      sha256 "c65372289250e466b739469ce114e608fecbb8ec3f61869d161ba93218d07fca"
 
       def install
         bin.install "inigo"
@@ -28,16 +28,16 @@ class InigoCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/inigolabs/cli/releases/download/v0.14.0/cli_linux_arm64.tar.gz"
-      sha256 "c91eb437144df5fe9ae25ebbd5b72c426132e8edd3248e7c147a0341f05bc8e2"
+      url "https://github.com/inigolabs/cli/releases/download/v0.15.0/cli_linux_arm64.tar.gz"
+      sha256 "6f03d1fbab4b0230397edee774ac838698fb2c3c4d723bdd6b94cc27cf65b246"
 
       def install
         bin.install "inigo"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/inigolabs/cli/releases/download/v0.14.0/cli_linux_x86_64.tar.gz"
-      sha256 "f3daf4b6bc086c3463de99f5b6cc0bcfa673535655709fbd27492665527adf00"
+      url "https://github.com/inigolabs/cli/releases/download/v0.15.0/cli_linux_x86_64.tar.gz"
+      sha256 "2676bdb5a8deeff9142e06a2a4e8a1085f8db0059024b835bcd39d66625804aa"
 
       def install
         bin.install "inigo"
