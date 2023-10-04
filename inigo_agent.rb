@@ -5,11 +5,11 @@
 class InigoAgent < Formula
   desc "Inigo Agent"
   homepage "https://www.inigo.io"
-  version "0.28.0"
+  version "0.28.1"
 
   on_macos do
-    url "https://github.com/inigolabs/artifacts/releases/download/v0.28.0/agent_darwin_all.tar.gz"
-    sha256 "cf79535cfd9064a06d352e33827671882b005387533b994ad670ff2b82cdfae4"
+    url "https://github.com/inigolabs/artifacts/releases/download/v0.28.1/agent_darwin_all.tar.gz"
+    sha256 "fac7a959142bc8e02dd6069037f85cbfe4adbd01ed403e07de754d89133505fc"
 
     def install
       bin.install "inigo_agent"
@@ -18,16 +18,16 @@ class InigoAgent < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/inigolabs/artifacts/releases/download/v0.28.0/agent_linux_arm64.tar.gz"
-      sha256 "ccbbc2bcf4c4541b51f4d6b6d3585bec50235b9793d32c9723be6754090c6e2a"
+      url "https://github.com/inigolabs/artifacts/releases/download/v0.28.1/agent_linux_arm64.tar.gz"
+      sha256 "af9a130360fe2eb10313e9042c7d8d4c916904121714dfb8616d39038bb88b4d"
 
       def install
         bin.install "inigo_agent"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/inigolabs/artifacts/releases/download/v0.28.0/agent_linux_amd64.tar.gz"
-      sha256 "2847c7aec22741b3f6354dd6a008168b7f656cf70780fb517841161c9a0b5a1b"
+      url "https://github.com/inigolabs/artifacts/releases/download/v0.28.1/agent_linux_amd64.tar.gz"
+      sha256 "a831fd05ec1a7af6198bfed622a1709ffc7a758bb1f1fec505d36dd01a5dd7f4"
 
       def install
         bin.install "inigo_agent"
