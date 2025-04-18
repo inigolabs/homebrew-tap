@@ -5,11 +5,11 @@
 class InigoGateway < Formula
   desc "Inigo Gateway"
   homepage "https://www.inigo.io"
-  version "1.1.1"
+  version "1.2.0"
 
   on_macos do
-    url "https://github.com/inigolabs/artifacts/releases/download/1.1.1/gateway_darwin_all.tar.gz"
-    sha256 "9b1d0c00e33f322d7d5c0cb98ae377a1d9437ec7529c8021c46bec87f302e5d0"
+    url "https://github.com/inigolabs/artifacts/releases/download/1.2.0/gateway_darwin_all.tar.gz"
+    sha256 "04d1069acd801c1a86337cee7886bef28b5a60c9f89e72a9a393d43ce576f3e4"
 
     def install
       bin.install "inigo_gateway"
@@ -18,16 +18,16 @@ class InigoGateway < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/inigolabs/artifacts/releases/download/1.1.1/gateway_linux_arm64.tar.gz"
-      sha256 "80eb3a84a2bdfe9eb8a240c8e32af54dc7211e9f2670ce52cb995945b5af7b92"
+      url "https://github.com/inigolabs/artifacts/releases/download/1.2.0/gateway_linux_arm64.tar.gz"
+      sha256 "2c408d224b0ddbc6bdb1aedada8ffd966d211a01b17a894a6a77db9a3a736194"
 
       def install
         bin.install "inigo_gateway"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/inigolabs/artifacts/releases/download/1.1.1/gateway_linux_amd64.tar.gz"
-      sha256 "27d39ad9432d33c60d894c92309b9e290ad0e2c8e9020389ce4828b148a03620"
+      url "https://github.com/inigolabs/artifacts/releases/download/1.2.0/gateway_linux_amd64.tar.gz"
+      sha256 "4f76ccbc4c6938b9285e3f4d8df46d42cd26301b811efec826bfa92c9d6fea33"
 
       def install
         bin.install "inigo_gateway"
